@@ -1,0 +1,11 @@
+FROM centos:7
+
+MAINTAINER Daniel Myung
+
+RUN mkdir -p /software/provision
+
+COPY *.sh /software/provision/
+
+RUN bash /software/provision/centos_setup.sh
+RUN bash /software/provision/xbrowse_setup.sh
+

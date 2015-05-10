@@ -1,0 +1,12 @@
+FROM ubuntu:trusty
+
+MAINTAINER Daniel Myung 
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN mkdir -p /software/provision
+
+COPY *.sh /software/provision/
+
+RUN bash /software/provision/ubuntu_setup.sh
+RUN bash /software/provision/xbrowse_setup.sh
+
